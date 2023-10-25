@@ -8,7 +8,7 @@
 <body>
 <div>Никита = ${whois}</div>
 <p>Он либит ${computers}</p>
-<a href="/index2">2 страница</a>
+<a href="/index">1 страница</a>
 </body>
 
 </html>
