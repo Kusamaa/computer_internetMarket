@@ -6,7 +6,14 @@
     <title>"Компьютерный магазин"</title>
 </head>
 <body>
-<div>Никита = ${whois}</div>
+<ul>
+    <li><a href="/index">Главная</a></li>
+    <li>Компьютері</li>
+    <li>Ноутбуки</li>
+    <li>Комплектующие</li>
+    <li>Справка</li>
+</ul>
+<div>Главна = ${whois}</div>
 <p>Он либит ${computers}</p>
 <a href="/index2">2 страница</a>
 </body>

@@ -28,7 +28,7 @@ public class HomeController {
         model.addAttribute("computers","компьютер2");
 
         log.info("show index2 : '/index2' = {}",model);
-        return "index2";
+        return "index";
     }
 
 
