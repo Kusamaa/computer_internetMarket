@@ -20,15 +20,32 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping(value = { "/index2"})
-    public String index2( Model model) {
-        log.info("show index2 : '/index2' = {}",model);
+    @GetMapping(value = { "/help"})
+    public String help(Model model) {
+        log.info("show help : '/help' = {}",model);
+        log.info("show help : 'help' = {}",model);
+        return "help";
+    }
 
-        model.addAttribute("whois","программист2");
-        model.addAttribute("computers","компьютер2");
+    @GetMapping(value = { "/computers"})
+    public String computers(Model model) {
+        log.info("show computers : '/computers' = {}",model);
+        log.info("show computers : 'computers' = {}",model);
+        return "computers";
+    }
 
-        log.info("show index2 : '/index2' = {}",model);
-        return "index";
+    @GetMapping(value = { "/hardware"})
+    public String hardware(Model model) {
+        log.info("show hardware : '/hardware' = {}",model);
+        log.info("show hardware : 'hardware' = {}",model);
+        return "hardware";
+    }
+
+    @GetMapping(value = { "/laptops"})
+    public String laptops(Model model) {
+        log.info("show laptops : '/laptops' = {}",model);
+        log.info("show laptops : 'laptops' = {}",model);
+        return "laptops";
     }
 
 
