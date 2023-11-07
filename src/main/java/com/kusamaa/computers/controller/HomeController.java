@@ -20,13 +20,6 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping(value = { "/help"})
-    public String help(Model model) {
-        log.info("show help : '/help' = {}",model);
-        log.info("show help : 'help' = {}",model);
-        return "help";
-    }
-
     @GetMapping(value = { "/computers"})
     public String computers(Model model) {
         log.info("show computers : '/computers' = {}",model);
