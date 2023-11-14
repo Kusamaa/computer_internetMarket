@@ -6,15 +6,28 @@
     <title>"Комплектующие"</title>
 </head>
 <body>
-<ul>
-    <li><a href="/index">Главная</a></li>
-    <li><a href="/computers">Готовые компьютеры</a></li>
-    <li><a href="/laptops">Ноутбуки</a></li>
-    <li><a href="/hardware">Комплектующие</a></li>
-    <li><a href="/help">Справка</a></li>
-</ul>
+<#include "block/menu.ftl">
+<table>
+    <tr></tr>
+    <tr></tr>
 <div>Страница "Комплектующие"</div>
 <p>Тут будут комплектующие для сборки ПК (Без переферии для пк!)</p>
+
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+
+            </tr>
+
+        </table>
+</table>
+
 </body>
 
 </html>

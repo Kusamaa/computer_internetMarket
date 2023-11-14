@@ -6,13 +6,8 @@
     <title>"Компьютерный магазин"</title>
 </head>
 <body>
-<ul>
-    <li><a href="/index">Главная</a></li>
-    <li><a href="/computers">Готовые компьютеры</a></li>
-    <li><a href="/laptops">Ноутбуки</a></li>
-    <li><a href="/hardware">Комплектующие</a></li>
-    <li><a href="/help">Справка</a></li>
-</ul>
+<#include "block/menu.ftl">
+
 <div>Главная страница с тестовыми переменными:</div>
 <p>${whois}</p>
 <p>Он любит ${computers}</p>

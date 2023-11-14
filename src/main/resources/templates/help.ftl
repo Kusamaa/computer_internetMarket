@@ -6,13 +6,8 @@
     <title>"Справка"</title>
 </head>
 <body>
-<ul>
-    <li><a href="/index">Главная</a></li>
-    <li><a href="/computers">Готовые компьютеры</a></li>
-    <li><a href="/laptops">Ноутбуки</a></li>
-    <li><a href="/hardware">Комплектующие</a></li>
-    <li><a href="/help">Справка</a></li>
-</ul>
+<#include "block/menu.ftl">
+
 <div>Страница "справка"</div>
 <p>Тут будут ответы на частые вопросы или что-то в этом духе</p>
 </body>
