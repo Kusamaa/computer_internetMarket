@@ -10,7 +10,6 @@
             width: 100%;
             border: 1px solid;
         }
-
         th {
             border: 1px solid;
             text-align: center;
