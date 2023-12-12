@@ -31,7 +31,9 @@ public class DeviceController {
         List<Device> deviceList = new ArrayList<>();
         if(deviceTypeId == null) {
             model.addAttribute("deviceTypeName", "Все устройства");
-            deviceList = deviceService.findAll();
+//            deviceList = deviceService.findAll();
+//            deviceList = deviceService.findAllByDeviceIdBefore(5);
+            deviceList = deviceService.findAllByDeviceIdGreaterThanEqual(5);
         }else{
             deviceList = deviceService.findAllByDeviceTypeId(deviceTypeId);
             String deviceTypeName = "";
@@ -41,7 +43,7 @@ public class DeviceController {
             }
             model.addAttribute("deviceTypeName", deviceTypeName);
         }
-        model.addAttribute("device", deviceList.get(0).toString());
+//        model.addAttribute("device", deviceList.get(0).toString());
         model.addAttribute("deviceList", deviceList);
 
         log.info("show device RESPONSE : model={}",model);

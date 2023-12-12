@@ -30,5 +30,12 @@ public class DeviceService {
         return deviceRepository.findAllByDeviceTypeId(deviceTypeId);
     }
 
+    public List<Device> findAllByDeviceIdBefore(Integer deviceId){
+        return deviceRepository.findAllByDeviceIdBefore(deviceId);
+    }
+    public List<Device> findAllByDeviceIdGreaterThanEqual(Integer deviceId){
+        return deviceRepository.findAllByDeviceIdGreaterThanEqual(deviceId);
+    }
+
 
 }
