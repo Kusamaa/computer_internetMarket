@@ -12,6 +12,7 @@ public class HardwareController {
     @GetMapping(value = { "/hardware"})
     public String hardware(Model model) {
         log.info("show hardware : '/hardware' = {}",model);
+        model.addAttribute("headerName","Комплектующие");
         log.info("show hardware : 'hardware' = {}",model);
         return "hardware";
     }

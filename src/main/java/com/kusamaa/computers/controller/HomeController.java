@@ -12,7 +12,7 @@ public class HomeController {
     @GetMapping(value = {"/" , "/index"})
     public String index(Model model) {
         log.info("show index : '/' or '/index' = {}",model);
-
+        model.addAttribute("headerName","Компьютерный магазин");
         model.addAttribute("whois","программист");
         model.addAttribute("computers","компьютер");
 

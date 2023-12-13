@@ -1,15 +1,49 @@
 <#-- Freemarker template -->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    // todo - вынести header  в отдельный  ftl-блок
-    //      - название страницы сделать переменной и значение ее передавать из бекенда model.addAttribute("header","");
-    <title>${header}</title>
-    <link href="../style.css" rel="stylesheet" type="text/css">
-</head>
+<#include "block/head.ftl">
 <body>
-<#include "block/menu.ftl">
+<table>
+    <tbody>
+    <tr>
+
+        <td rowspan="2" style="width: 200px;">
+            <#include "block/menu.ftl">
+        </td>
+
+        <td style="vertical-align: top">
+            <table>
+                <thead>
+
+                <tr>
+                    <th colspan="7">Название девайса</th>
+                </tr>
+
+                <tr>
+                    <td>id устройства</td>
+                    <td>id типа</td>
+                    <td>Тип</td>
+                    <td>Название</td>
+                    <td>Закупка</td>
+                    <td>Продажа</td>
+                    <td>Описание</td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                </thead>
+            </table>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
 
 <div>Страница ${deviceTypeName}</div>
 <p>Выводит все устройства которые продаются на сайте</p>

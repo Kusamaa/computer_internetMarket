@@ -30,6 +30,7 @@ public class DeviceController {
 //        в model кинуть название типа устройства (Компьютер/Ноутбук);
         List<Device> deviceList = new ArrayList<>();
         if(deviceTypeId == null) {
+            model.addAttribute("headerName","Все устройства");
             model.addAttribute("deviceTypeName", "Все устройства");
             deviceList = deviceService.findAll();
         }else{
@@ -39,6 +40,7 @@ public class DeviceController {
                 deviceTypeName = device.getDeviceType().getName();
                 break;
             }
+            model.addAttribute("headerName",deviceTypeName);
             model.addAttribute("deviceTypeName", deviceTypeName);
         }
         model.addAttribute("device", deviceList.get(0).toString());

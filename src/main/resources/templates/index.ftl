@@ -1,43 +1,16 @@
 <#-- Freemarker template -->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>"Компьютерный магазин"</title>
-
-    <style>
-        table {
-            width: 100%;
-            border: 1px solid;
-        }
-        th {
-            border: 1px solid;
-            text-align: center;
-            /*vertical-align: top;*/
-        }
-
-        td {
-            border: 1px solid;
-            text-align: center;
-        }
-    </style>
-</head>
+<#include "block/head.ftl">
 <body>
 <table>
     <tbody>
     <tr>
 
-        <td>
-            <ul>
-                <li><a href="/index">Главная</a></li>
-                <li><a href="/computers">Готовые компьютеры</a></li>
-                <li><a href="/laptops">Ноутбуки</a></li>
-                <li><a href="/hardware">Комплектующие</a></li>
-                <li><a href="/help">Справка</a></li>
-            </ul>
+        <td rowspan="2" style="width: 200px;">
+            <#include "block/menu.ftl">
         </td>
 
-        <td>
+        <td style="vertical-align: top">
             <table>
                 <thead>
 

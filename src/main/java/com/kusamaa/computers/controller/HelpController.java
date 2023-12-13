@@ -12,6 +12,7 @@ public class HelpController {
     @GetMapping(value = { "/help"})
     public String help(Model model) {
         log.info("show help : '/help' = {}",model);
+        model.addAttribute("headerName","Справка");
         log.info("show help : 'help' = {}",model);
         return "help";
     }
