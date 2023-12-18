@@ -27,16 +27,17 @@
                     <td>Продажа</td>
                     <td>Описание</td>
                 </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
+                <#list hardwareList as hardware>
+                    <tr>
+                        <td style="text-align: center">${hardware.hardwareId!0}</td>
+                        <td style="text-align: center">${hardware.hardwareType.hardwareTypeId!0}</td>
+                        <td>${hardware.getHardwareType().name!""}</td>
+                        <td>${hardware.name!""}</td>
+                        <td style="text-align: center">${hardware.buyingPrice!0.00}</td>
+                        <td style="text-align: center">${hardware.sellingPrice!0.00}</td>
+                        <td>${hardware.description!""}</td>
+                    </tr>
+                </#list>
                 </thead>
             </table>
         </td>

@@ -27,16 +27,17 @@
                     <td>Продажа</td>
                     <td>Описание</td>
                 </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                </tr>
+                <#list deviceList as device>
+                    <tr>
+                        <td style="text-align: center;">${device.deviceId!0}</td>
+                        <td style="text-align: center;">${device.deviceType.deviceTypeId!0}</td>
+                        <td>${device.getDeviceType().name!""}</td>
+                        <td>${device.name!""}</td>
+                        <td style="text-align: center;">${device.buyingPrice!0.00}</td>
+                        <td style="text-align: center;">${device.getSellingPrice()!0.00}</td>
+                        <td>${device.description!""}</td>
+                    </tr>
+                </#list>
                 </thead>
             </table>
         </td>
