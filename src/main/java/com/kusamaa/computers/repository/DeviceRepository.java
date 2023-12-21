@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface DeviceRepository extends PagingAndSortingRepository<Device, Integer> {
     // SpringData / SpringJPA
-    public List<Device> findAllByDeviceTypeId(Integer deviceTypeId);
+    List<Device> findAllByDeviceTypeId(Integer deviceTypeId);
 
 }
