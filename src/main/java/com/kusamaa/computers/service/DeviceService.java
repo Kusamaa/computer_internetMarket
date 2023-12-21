@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -30,5 +31,9 @@ public class DeviceService {
         return deviceRepository.findAllByDeviceTypeId(deviceTypeId);
     }
 
-
+    public Device findById(Integer deviceId){
+        Optional<Device> deviceOptional = deviceRepository.findById(deviceId);
+        Device device = deviceOptional.isPresent() ? deviceOptional.get() : null;
+        return device;
+    }
 }

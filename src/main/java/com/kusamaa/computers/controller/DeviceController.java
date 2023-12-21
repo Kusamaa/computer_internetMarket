@@ -1,9 +1,7 @@
 package com.kusamaa.computers.controller;
 
 import com.kusamaa.computers.entity.Device;
-import com.kusamaa.computers.entity.DeviceType;
 import com.kusamaa.computers.service.DeviceService;
-import com.kusamaa.computers.service.DeviceTypeService;
 import com.kusamaa.computers.service.MenuService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -54,6 +52,6 @@ public class DeviceController {
 
         model = menuService.getMenuModel(model);
         log.info("show device RESPONSE : model={}",model);
-        return "device";
+        return "devices";
     }
 }

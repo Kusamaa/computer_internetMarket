@@ -11,4 +11,5 @@ public interface DeviceRepository extends PagingAndSortingRepository<Device, Int
     // SpringData / SpringJPA
     public List<Device> findAllByDeviceTypeId(Integer deviceTypeId);
 
+
 }
