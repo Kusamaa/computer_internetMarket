@@ -12,3 +12,11 @@ td {
     border: 1px solid;
     text-align: center;
 }
+
+/*.device-type{*/
+/*    text-align: left;*/
+/*}*/
+
+li{
+    text-align: left;
+}

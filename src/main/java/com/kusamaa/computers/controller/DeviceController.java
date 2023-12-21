@@ -1,7 +1,10 @@
 package com.kusamaa.computers.controller;
 
 import com.kusamaa.computers.entity.Device;
+import com.kusamaa.computers.entity.DeviceType;
 import com.kusamaa.computers.service.DeviceService;
+import com.kusamaa.computers.service.DeviceTypeService;
+import com.kusamaa.computers.service.MenuService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -18,6 +21,7 @@ import java.util.List;
 public class DeviceController {
 
     private final DeviceService deviceService;
+    private final MenuService menuService;
 
     @GetMapping(value = { "/device"})
     public String laptops(Model model, @RequestParam(required = false) Integer deviceTypeId) {
@@ -28,7 +32,9 @@ public class DeviceController {
 //        Дай нам девайс у которого тип равен deviceTypeId
 
 //        в model кинуть название типа устройства (Компьютер/Ноутбук);
+
         List<Device> deviceList = new ArrayList<>();
+
         if(deviceTypeId == null) {
             model.addAttribute("headerName","Все устройства");
             model.addAttribute("deviceTypeName", "Все устройства");
@@ -46,8 +52,8 @@ public class DeviceController {
         model.addAttribute("device", deviceList.get(0).toString());
         model.addAttribute("deviceList", deviceList);
 
+        model = menuService.getMenuModel(model);
         log.info("show device RESPONSE : model={}",model);
-
         return "device";
     }
 }
