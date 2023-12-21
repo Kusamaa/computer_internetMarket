@@ -37,7 +37,6 @@ public class HardwareController {
                 break;
             }
             model.addAttribute("headerName", hardwareTypeName);
-            model.addAttribute("hardwareList", hardwareList);
         }
         model.addAttribute("hardwareList", hardwareList);
 
