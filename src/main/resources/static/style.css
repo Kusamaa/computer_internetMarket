@@ -2,21 +2,34 @@ table {
     width: 100%;
     border: 1px solid;
 }
-th {
+th, td {
     border: 1px solid;
-    text-align: center;
-    /*vertical-align: top;*/
 }
 
-td {
-    border: 1px solid;
-    text-align: center;
+a {
+    color: inherit;
 }
 
-/*.device-type{*/
-/*    text-align: left;*/
-/*}*/
+.menu-wrapper {
+    padding-left: 0;
+}
 
-li{
+.menu-items{
+    color: #2979FF;
+    text-decoration-line: underline;
     text-align: left;
+    list-style-type: none;
+    vertical-align: top;
+}
+
+.menu-items-subitems{
+    color: #2979FF;
+    text-decoration-line: underline;
+    text-align: left;
+    list-style-type: none;
+}
+
+.list-link{
+    color: #2979FF;
+    text-decoration-line: none;
 }

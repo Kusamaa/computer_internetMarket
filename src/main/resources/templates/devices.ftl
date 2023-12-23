@@ -6,7 +6,7 @@
     <tbody>
     <tr>
 
-        <td rowspan="2" style="width: 200px;">
+        <td rowspan="2" style="width: 200px; vertical-align: top;">
             <#include "block/menu.ftl">
         </td>
 
@@ -15,13 +15,13 @@
                 <thead>
 
                 <tr>
-                    <th colspan="7">Название девайса</th>
+                    <th colspan="4">${headerName}</th>
                 </tr>
 
                 <tr>
-                    <td>id устройства</td>
-                    <td>id типа</td>
-                    <td>Тип</td>
+<#--                    <td>id устройства</td>-->
+<#--                    <td>id типа</td>-->
+<#--                    <td>Тип</td>-->
                     <td>Название</td>
                     <td>Закупка</td>
                     <td>Продажа</td>
@@ -29,10 +29,10 @@
                 </tr>
                 <#list deviceList as device>
                     <tr>
-                        <td style="text-align: center;">${device.deviceId!0}</td>
-                        <td style="text-align: center;">${device.deviceType.deviceTypeId!0}</td>
-                        <td>${device.getDeviceType().name!""}</td>
-                        <td>${device.name!""}</td>
+<#--                        <td style="text-align: center;">${device.deviceId!0}</td>-->
+<#--                        <td style="text-align: center;">${device.deviceType.deviceTypeId!0}</td>-->
+<#--                        <td>${device.getDeviceType().name!""}</td>-->
+                        <td><a class="list-link" href="/device?deviceId=${device.deviceId!0}">${device.name!""}</a></td>
                         <td style="text-align: center;">${device.buyingPrice!0.00}</td>
                         <td style="text-align: center;">${device.getSellingPrice()!0.00}</td>
                         <td>${device.description!""}</td>

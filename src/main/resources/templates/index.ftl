@@ -6,7 +6,7 @@
     <tbody>
     <tr>
 
-        <td rowspan="2" style="width: 200px;">
+        <td rowspan="2" style="width: 200px; vertical-align: top;">
             <#include "block/menu.ftl">
         </td>
 
@@ -15,13 +15,13 @@
                 <thead>
 
                 <tr>
-                    <th colspan="7">Название девайса</th>
+                    <th colspan="4">${headerName}</th>
                 </tr>
 
                 <tr>
-                    <td>id устройства</td>
-                    <td>id типа</td>
-                    <td>Тип</td>
+<#--                    <td>id устройства</td>-->
+<#--                    <td>id типа</td>-->
+<#--                    <td>Тип</td>-->
                     <td>Название</td>
                     <td>Закупка</td>
                     <td>Продажа</td>
@@ -33,9 +33,9 @@
                     <td>2</td>
                     <td>3</td>
                     <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
+<#--                    <td>5</td>-->
+<#--                    <td>6</td>-->
+<#--                    <td>7</td>-->
                 </tr>
                 </thead>
             </table>

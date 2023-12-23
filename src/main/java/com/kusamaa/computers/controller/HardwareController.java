@@ -2,6 +2,7 @@ package com.kusamaa.computers.controller;
 
 import com.kusamaa.computers.entity.Hardware;
 import com.kusamaa.computers.service.HardwareService;
+import com.kusamaa.computers.service.MenuService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,7 @@ import java.util.List;
 public class HardwareController {
 
     private final HardwareService hardwareService;
-
+    private final MenuService menuService;
     @GetMapping(value = { "/hardware"})
     public String hardware(Model model, @RequestParam(required = false) Integer hardwareTypeId) {
         log.info("show hardware : '/hardware' = {}",model);
@@ -40,6 +41,7 @@ public class HardwareController {
         }
         model.addAttribute("hardwareList", hardwareList);
 
+        model = menuService.getMenuModel(model);
         log.info("show hardware : 'hardware' = {}",model);
 
         return "hardware";

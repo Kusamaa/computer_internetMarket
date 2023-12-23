@@ -1,6 +1,7 @@
 package com.kusamaa.computers.service;
 
 import com.kusamaa.computers.entity.Device;
+import com.kusamaa.computers.entity.Hardware;
 import com.kusamaa.computers.repository.DeviceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -35,5 +36,9 @@ public class DeviceService {
         Optional<Device> deviceOptional = deviceRepository.findById(deviceId);
         Device device = deviceOptional.isPresent() ? deviceOptional.get() : null;
         return device;
+    }
+
+    public List<Device> findAllByDeviceId(Integer deviceId){
+        return deviceRepository.findAllByDeviceId(deviceId);
     }
 }
