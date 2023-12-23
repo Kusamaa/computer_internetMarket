@@ -14,7 +14,7 @@
         <li class="menu-items"><a href="/hardware">Комплектующие</a></li>
             <ul>
                 <#list hardwareTypes as hardwareType>
-                    <li class="menu-items-subitems"><a href="/hardware?harwareTypeId=${hardwareType.hardwareTypeId!0}">${hardwareType.name!""}</a></li>
+                    <li class="menu-items-subitems"><a href="/hardware?hardwareTypeId=${hardwareType.hardwareTypeId!0}">${hardwareType.name!""}</a></li>
                 </#list>
             </ul>
     </#if>
