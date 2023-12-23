@@ -26,9 +26,9 @@ public class DeviceController {
     public String device(Model model, @RequestParam(required = false) Integer deviceId, Integer hardwareId) {
         log.info("show device REQUEST : /device&deviceId={},/hardware&hardwareId={}",deviceId, hardwareId);
 
-        List<Device> device = deviceService.findAllByDeviceId(deviceId);
-        List<Hardware> hardware = hardwareService.findAllByHardwareId(hardwareId);
+
         if(hardwareId!=null){
+            List<Hardware> hardware = hardwareService.findAllByHardwareId(hardwareId);
             String hardwareName = "";
             for(Hardware singleHardware: hardware){
                 hardwareName = singleHardware.getName();
@@ -40,6 +40,7 @@ public class DeviceController {
             model.addAttribute("hardware", hardware);
         }
         else{
+            List<Device> device = deviceService.findAllByDeviceId(deviceId);
             String deviceName = "";
             for(Device singleDevice: device){
                 deviceName = singleDevice.getName();
