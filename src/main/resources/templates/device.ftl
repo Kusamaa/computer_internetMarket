@@ -28,7 +28,7 @@
           <td>Описание</td>
         </tr>
         <#if hardware??>
-          <#list hardware as hardware>
+<#--          <#list hardware as hardware>-->
             <tr>
               <#--                        <td style="text-align: center;">${device.deviceId!0}</td>-->
               <#--                        <td style="text-align: center;">${device.deviceType.deviceTypeId!0}</td>-->
@@ -38,7 +38,7 @@
               <td style="text-align: center;">${hardware.getSellingPrice()!0.00}</td>
               <td>${hardware.description!""}</td>
             </tr>
-          </#list>
+<#--          </#list>-->
         </#if>
 
         <#if device??>

@@ -10,6 +10,4 @@ import java.util.List;
 public interface HardwareRepository extends PagingAndSortingRepository<Hardware, Integer> {
 
     List<Hardware> findAllByHardwareTypeId(Integer hardwareTypeId);
-
-    List<Hardware> findAllByHardwareId(Integer hardwareId);
 }

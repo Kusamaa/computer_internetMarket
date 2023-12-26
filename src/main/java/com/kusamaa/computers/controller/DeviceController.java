@@ -28,27 +28,21 @@ public class DeviceController {
 
 
         if(hardwareId!=null){
-            List<Hardware> hardware = hardwareService.findAllByHardwareId(hardwareId);
-            String hardwareName = "";
-            for(Hardware singleHardware: hardware){
-                hardwareName = singleHardware.getName();
-                break;
-            }
+            Hardware hardware = hardwareService.findById(hardwareId);
+            String hardwareName = hardware.getName();
             model.addAttribute("headerName",hardwareName);
-
-
             model.addAttribute("hardware", hardware);
         }
         else{
-            List<Device> device = deviceService.findAllByDeviceId(deviceId);
+            List<Device> deviceList = deviceService.findAllByDeviceId(deviceId);
             String deviceName = "";
-            for(Device singleDevice: device){
+            for(Device singleDevice: deviceList){
                 deviceName = singleDevice.getName();
                 break;
             }
             model.addAttribute("headerName",deviceName);
 
-            model.addAttribute("device",device);
+            model.addAttribute("device",deviceList);
         }
 
         model = menuService.getMenuModel(model);

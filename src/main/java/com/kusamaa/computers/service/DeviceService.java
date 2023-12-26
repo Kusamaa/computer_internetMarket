@@ -38,6 +38,7 @@ public class DeviceService {
         return device;
     }
 
+    // todo - delete method (rename findById(...)
     public List<Device> findAllByDeviceId(Integer deviceId){
         return deviceRepository.findAllByDeviceId(deviceId);
     }
