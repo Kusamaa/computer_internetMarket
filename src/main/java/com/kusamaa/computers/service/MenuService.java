@@ -26,7 +26,6 @@ public class MenuService {
         model.addAttribute("deviceTypes", deviceTypes);
         model.addAttribute("hardwareTypes", hardwareTypes);
 
-
         return model;
     }
 

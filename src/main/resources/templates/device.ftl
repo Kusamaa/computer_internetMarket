@@ -39,7 +39,7 @@
               <td>${hardware.description!""}</td>
             </tr>
 <#--          </#list>-->
-        </#if>
+        </#if >
 
         <#if device??>
           <#list device as device>

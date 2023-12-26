@@ -8,6 +8,7 @@ th, td {
 
 a {
     color: inherit;
+    text-decoration: none !important;
 }
 
 .menu-wrapper {
@@ -16,7 +17,7 @@ a {
 
 .menu-items{
     color: #2979FF;
-    text-decoration-line: underline;
+    /*text-decoration-line: underline;*/
     text-align: left;
     list-style-type: none;
     vertical-align: top;
@@ -24,12 +25,15 @@ a {
 
 .menu-items-subitems{
     color: #2979FF;
-    text-decoration-line: underline;
+    /*text-decoration-line: underline;*/
     text-align: left;
     list-style-type: none;
+}
+.menu-items-subitems :hover{
+    text-decoration-line: underline;
 }
 
 .list-link{
     color: #2979FF;
-    text-decoration-line: none;
+    /*text-decoration-line: none;*/
 }
