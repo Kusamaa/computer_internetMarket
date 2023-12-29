@@ -47,7 +47,6 @@ public class DevicesController {
             model.addAttribute("headerName",deviceTypeName);
             model.addAttribute("deviceTypeName", deviceTypeName);
         }
-        model.addAttribute("device", deviceList.get(0).toString());
         model.addAttribute("deviceList", deviceList);
 
         model = menuService.getMenuModel(model);

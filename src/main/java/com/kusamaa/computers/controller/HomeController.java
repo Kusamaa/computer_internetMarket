@@ -16,8 +16,6 @@ public class HomeController {
     public String index(Model model) {
         log.info("show index : '/' or '/index' = {}",model);
         model.addAttribute("headerName","Компьютерный магазин");
-        model.addAttribute("whois","программист");
-        model.addAttribute("computers","компьютер");
 
         model = menuService.getMenuModel(model);
         log.info("show index : '/' or '/index' = {}",model);

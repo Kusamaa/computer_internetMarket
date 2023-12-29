@@ -2,7 +2,7 @@
 <html lang="en">
 <#include "block/head.ftl">
 <body>
-<table>
+<table style="height: 100%">
     <tbody>
     <tr>
 
@@ -14,30 +14,21 @@
             <table>
                 <thead>
 
-                <tr>
-                    <th colspan="4">${headerName}</th>
-                </tr>
-
-                <tr>
-<#--                    <td>id устройства</td>-->
-<#--                    <td>id типа</td>-->
-<#--                    <td>Тип</td>-->
-                    <td>Название</td>
-                    <td>Закупка</td>
-                    <td>Продажа</td>
-                    <td>Описание</td>
-                </tr>
-                <#list hardwareList as hardware>
                     <tr>
-<#--                        <td style="text-align: center">${hardware.hardwareId!0}</td>-->
-<#--                        <td style="text-align: center">${hardware.hardwareType.hardwareTypeId!0}</td>-->
-<#--                        <td>${hardware.getHardwareType().name!""}</td>-->
-                        <td><a class="list-link" href="/device?hardwareId=${hardware.hardwareId!0}">${hardware.name!""}</a></td>
-                        <td style="text-align: center">${hardware.buyingPrice!0.00}</td>
-                        <td style="text-align: center">${hardware.sellingPrice!0.00}</td>
+                        <th colspan="4" class="table-header">${headerName}</th>
+                    </tr>
+
+                    <tr>
+                        <td>Название</td>
+                        <td>Закупка</td>
+                        <td>Продажа</td>
+                        <td>Описание</td>
+                    </tr>
+                        <td>${hardware.name!""}</td>
+                        <td style="text-align: center;">${hardware.buyingPrice!0.00}</td>
+                        <td style="text-align: center;">${hardware.getSellingPrice()!0.00}</td>
                         <td>${hardware.description!""}</td>
                     </tr>
-                </#list>
                 </thead>
             </table>
         </td>

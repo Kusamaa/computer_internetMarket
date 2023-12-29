@@ -11,10 +11,10 @@
             </ul>
     </#if>
     <#if hardwareTypes??>
-        <li class="menu-items"><a href="/hardware">Комплектующие</a></li>
+        <li class="menu-items"><a href="/hardwares">Комплектующие</a></li>
             <ul>
                 <#list hardwareTypes as hardwareType>
-                    <li class="menu-items-subitems"><a href="/hardware?hardwareTypeId=${hardwareType.hardwareTypeId!0}">${hardwareType.name!""}</a></li>
+                    <li class="menu-items-subitems"><a href="/hardwares?hardwareTypeId=${hardwareType.hardwareTypeId!0}">${hardwareType.name!""}</a></li>
                 </#list>
             </ul>
     </#if>

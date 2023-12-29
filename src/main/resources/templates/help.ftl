@@ -2,7 +2,7 @@
 <html lang="en">
 <#include "block/head.ftl">
 <body>
-<table>
+<table style="height: 100%">
     <tbody>
     <tr>
 
@@ -13,31 +13,9 @@
         <td style="vertical-align: top">
             <table>
                 <thead>
-
                 <tr>
-                    <th colspan="4">${headerName}</th>
+                    <th colspan="4" class="table-header">${headerName}</th>
                 </tr>
-
-                <tr>
-<#--                    <td>id устройства</td>-->
-<#--                    <td>id типа</td>-->
-<#--                    <td>Тип</td>-->
-                    <td>Название</td>
-                    <td>Закупка</td>
-                    <td>Продажа</td>
-                    <td>Описание</td>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-<#--                    <td>5</td>-->
-<#--                    <td>6</td>-->
-<#--                    <td>7</td>-->
-                </tr>
-                </thead>
             </table>
         </td>
 
@@ -45,8 +23,6 @@
     </tbody>
 </table>
 
-<div>Страница "справка"</div>
-<p>Тут будут ответы на частые вопросы или что-то в этом духе</p>
 </body>
 
 </html>

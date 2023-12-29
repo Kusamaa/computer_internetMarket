@@ -23,27 +23,13 @@ public class DeviceController {
     private final MenuService menuService;
 
     @GetMapping(value = {"/device"})
-    public String device(Model model, @RequestParam(required = false) Integer deviceId, Integer hardwareId) {
-        log.info("show device REQUEST : /device&deviceId={},/hardware&hardwareId={}",deviceId, hardwareId);
+    public String device(Model model, @RequestParam(required = false) Integer deviceId) {
+        log.info("show device REQUEST : /device&deviceId={}",deviceId);
 
-
-        if(hardwareId!=null){
-            Hardware hardware = hardwareService.findById(hardwareId);
-            String hardwareName = hardware.getName();
-            model.addAttribute("headerName",hardwareName);
-            model.addAttribute("hardware", hardware);
-        }
-        else{
-            List<Device> deviceList = deviceService.findAllByDeviceId(deviceId);
-            String deviceName = "";
-            for(Device singleDevice: deviceList){
-                deviceName = singleDevice.getName();
-                break;
-            }
-            model.addAttribute("headerName",deviceName);
-
-            model.addAttribute("device",deviceList);
-        }
+        Device device = deviceService.findById(deviceId);
+        String deviceName = device.getName();
+        model.addAttribute("headerName",deviceName);
+        model.addAttribute("device", device);
 
         model = menuService.getMenuModel(model);
         log.info("show device RESPONSE : model={}",model);

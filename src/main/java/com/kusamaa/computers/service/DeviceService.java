@@ -32,14 +32,11 @@ public class DeviceService {
         return deviceRepository.findAllByDeviceTypeId(deviceTypeId);
     }
 
-    public Device findById(Integer deviceId){
-        Optional<Device> deviceOptional = deviceRepository.findById(deviceId);
-        Device device = deviceOptional.isPresent() ? deviceOptional.get() : null;
-        return device;
-    }
-
-    // todo - delete method (rename findById(...)
     public List<Device> findAllByDeviceId(Integer deviceId){
         return deviceRepository.findAllByDeviceId(deviceId);
+    }
+
+    public Device findById(Integer deviceId){
+        return deviceRepository.findById(deviceId).get();
     }
 }
