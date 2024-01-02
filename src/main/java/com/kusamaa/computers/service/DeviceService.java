@@ -1,6 +1,7 @@
 package com.kusamaa.computers.service;
 
 import com.kusamaa.computers.entity.Device;
+import com.kusamaa.computers.entity.Hardware;
 import com.kusamaa.computers.repository.DeviceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -30,12 +32,11 @@ public class DeviceService {
         return deviceRepository.findAllByDeviceTypeId(deviceTypeId);
     }
 
-    public List<Device> findAllByDeviceIdBefore(Integer deviceId){
-        return deviceRepository.findAllByDeviceIdBefore(deviceId);
-    }
-    public List<Device> findAllByDeviceIdGreaterThanEqual(Integer deviceId){
-        return deviceRepository.findAllByDeviceIdGreaterThanEqual(deviceId);
+    public List<Device> findAllByDeviceId(Integer deviceId){
+        return deviceRepository.findAllByDeviceId(deviceId);
     }
 
-
+    public Device findById(Integer deviceId){
+        return deviceRepository.findById(deviceId).get();
+    }
 }

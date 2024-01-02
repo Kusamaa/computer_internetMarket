@@ -1,17 +1,39 @@
 <#-- Freemarker template -->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>"Компьютерный магазин"</title>
-</head>
+<#include "block/head.ftl">
 <body>
-<#include "block/menu.ftl">
+<table style="height: 100%">
+    <tbody>
+    <tr>
 
-<div>Главная страница с тестовыми переменными:</div>
-<p>${whois}</p>
-<p>Он любит ${computers}</p>
-<a href="/help">2 страница(справка)</a> <#--гиперссылка была до этого, решил не убирать-->
+        <td rowspan="2" style="width: 200px; vertical-align: top;">
+            <#include "block/menu.ftl">
+        </td>
+
+        <td style="vertical-align: top">
+            <table>
+                <thead>
+
+                <tr>
+                    <th colspan="4" class="table-header">${headerName}</th>
+                </tr>
+                </thead>
+            </table>
+            <h1 class="welcome-header">Добро пожаловать</h1>
+            <p class="welcome-text">
+<pre>
+<h3>Добро пожаловать в наш мир технологий!</h3>
+Мы - ваш надежный партнер в сфере высокотехнологичных решений. Наши полки наполнены не только готовыми компьютерами и ноутбуками,
+но и всем, что нужно для их улучшения. А ещё мы предлагаем широкий выбор телевизоров, планшетов, клавиатур, мышей и других гаджетов
+для вашего комфорта. Доверьтесь нам, и создайте свое пространство высоких технологий!
+</pre>
+            </p>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
 </body>
 
 </html>

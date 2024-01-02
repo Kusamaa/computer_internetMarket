@@ -1,15 +1,28 @@
 <#-- Freemarker template -->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>"Справка"</title>
-</head>
+<#include "block/head.ftl">
 <body>
-<#include "block/menu.ftl">
+<table style="height: 100%">
+    <tbody>
+    <tr>
 
-<div>Страница "справка"</div>
-<p>Тут будут ответы на частые вопросы или что-то в этом духе</p>
+        <td rowspan="2" style="width: 200px; vertical-align: top;">
+            <#include "block/menu.ftl">
+        </td>
+
+        <td style="vertical-align: top">
+            <table>
+                <thead>
+                <tr>
+                    <th colspan="4" class="table-header">${headerName}</th>
+                </tr>
+            </table>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
 </body>
 
 </html>

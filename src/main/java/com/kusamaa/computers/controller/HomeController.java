@@ -1,21 +1,23 @@
 package com.kusamaa.computers.controller;
 
-import lombok.extern.log4j.Log4j2;
+import com.kusamaa.computers.service.MenuService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-@Log4j2
+@Slf4j
+@RequiredArgsConstructor
 public class HomeController {
-
+    private final MenuService menuService;
     @GetMapping(value = {"/" , "/index"})
     public String index(Model model) {
         log.info("show index : '/' or '/index' = {}",model);
+        model.addAttribute("headerName","Компьютерный магазин");
 
-        model.addAttribute("whois","программист");
-        model.addAttribute("computers","компьютер");
-
+        model = menuService.getMenuModel(model);
         log.info("show index : '/' or '/index' = {}",model);
         return "index";
     }

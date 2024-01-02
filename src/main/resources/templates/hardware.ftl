@@ -1,44 +1,40 @@
 <#-- Freemarker template -->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>"Комплектующие"</title>
-</head>
+<#include "block/head.ftl">
 <body>
-
-<table border="1" style="width: 100%;">
+<table style="height: 100%">
+    <tbody>
     <tr>
-        <td rowspan="2" style="width: 200px;">
+
+        <td rowspan="2" style="width: 200px; vertical-align: top;">
             <#include "block/menu.ftl">
         </td>
-        <td><div style="text-align: center">Название девайса</div></td>
-    </tr>
-    <tr>
-<#--        <td></td>-->
-        <td style="vertical-align: baseline">
-            <table border="1" width="100%">
-                <tr style="text-align: center; background: lightgrey;">
-                    <td>id устройства</td>
-                    <td>id типа</td>
-                    <td>Тип</td>
-                    <td>Название</td>
-                    <td>Закупка</td>
-                    <td>Продажа</td>
-                    <td>Описание</td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">1</td>
-                    <td style="text-align: center;">2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td style="text-align: center;">5</td>
-                    <td style="text-align: center;">6</td>
-                    <td>7</td>
-                </tr>
+
+        <td style="vertical-align: top">
+            <table>
+                <thead>
+
+                    <tr>
+                        <th colspan="4" class="table-header">${headerName}</th>
+                    </tr>
+
+                    <tr>
+                        <td>Название</td>
+                        <td>Закупка</td>
+                        <td>Продажа</td>
+                        <td>Описание</td>
+                    </tr>
+                        <td>${hardware.name!""}</td>
+                        <td style="text-align: center;">${hardware.buyingPrice!0.00}</td>
+                        <td style="text-align: center;">${hardware.getSellingPrice()!0.00}</td>
+                        <td>${hardware.description!""}</td>
+                    </tr>
+                </thead>
             </table>
         </td>
+
     </tr>
+    </tbody>
 </table>
 
 </body>
