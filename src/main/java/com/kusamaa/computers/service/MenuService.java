@@ -2,7 +2,6 @@ package com.kusamaa.computers.service;
 
 
 import com.kusamaa.computers.entity.DeviceType;
-import com.kusamaa.computers.entity.Hardware;
 import com.kusamaa.computers.entity.HardwareType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

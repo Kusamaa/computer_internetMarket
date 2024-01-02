@@ -19,7 +19,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class DeviceController {
     private final DeviceService deviceService;
-    private final HardwareService hardwareService;
     private final MenuService menuService;
 
     @GetMapping(value = {"/device"})
