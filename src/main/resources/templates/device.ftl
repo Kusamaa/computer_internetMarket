@@ -7,7 +7,7 @@
   <tr>
 
     <td rowspan="2" style="width: 200px; vertical-align: top;">
-      <#include "block/menu.ftl">
+      <#include "block/menu_0.ftl">
     </td>
 
     <td style="vertical-align: top">
