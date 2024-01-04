@@ -2,7 +2,7 @@
 
 <!-- sidebar menu -->
 <ul class="sidebar-menu" data-widget="tree">
-    <li> <a href="/index"> <i class="icon-home"></i> <span>Главная</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a></li>
+    <li> <a href="/index"> <i class="fa fa-home"></i> <span>Главная</span><span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a></li>
 
     <#if deviceTypes??>
         <li class="treeview"> <a href="#"> <i class="fa fa-laptop"></i> <span>Устройства</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
@@ -26,6 +26,6 @@
         </li>
     </#if>
 
-    <li> <a href="/help"> <i class="fa fa-info-circle"></i> <span>Главная</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a></li>
+    <li> <a href="/help"> <i class="fa fa-info-circle"></i> <span>Справка</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a></li>
 </ul>
 
