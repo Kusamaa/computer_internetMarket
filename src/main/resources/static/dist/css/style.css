@@ -471,7 +471,7 @@ color:#ccc
 }
 .content-header.sty-one {
 	position: relative;
-	padding: 20px 15px 15px 15px;
+	padding: 20px 15px 15px 0px;
 	margin: 0 0 0px;
 }
 .content-header>h1 {
