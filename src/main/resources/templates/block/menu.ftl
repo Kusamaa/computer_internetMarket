@@ -9,7 +9,7 @@
             <ul class="treeview-menu">
                 <li><a href="/devices"><i class="fa fa-angle-right"></i>Все устройства</a></li>
                 <#list deviceTypes as deviceType>
-                <li><a href="/devices?deviceTypeId=${deviceType.deviceTypeId!0}"><i class="fa fa-angle-right"></i> ${deviceType.name!""}</a></li>
+                <li><a href="/devices?deviceTypeId=${deviceType.deviceTypeId!0}"><i class="fa fa-angle-right"></i>${deviceType.name!""}</a></li>
                 </#list>
             </ul>
         </li>
