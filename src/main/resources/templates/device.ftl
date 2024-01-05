@@ -54,28 +54,52 @@
         <#--        </div>-->
         <!-- Main content -->
         <div class="content">
-            <td style="vertical-align: top">
-                <table>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="dist/img/${device.deviceId!0}(device).jpg" alt="Фото товара" style="height: 500px; width: 500px">
+                </div>
 
-                    <tr>
-                        <td>Название</td>
-                        <td style="text-align: center;">Закупка</td>
-                        <td style="text-align: center;">Продажа</td>
-                        <td>Описание</td>
-                    </tr>
+                <div class="col-lg-8">
+                    <td style="vertical-align: top">
+                        <div class="row">
 
-                    <#if device??>
-                        <tr>
-                            <td>${device.name!""}</td>
-                            <td style="text-align: center;">${device.buyingPrice!0.00}</td>
-                            <td style="text-align: center;">${device.getSellingPrice()!0.00}</td>
-                            <td>${device.description!""}</td>
-                        </tr>
-                    </#if>
+                            <div class="col-lg-10">
+                                <table>
+                                    <tr>
+                                        <td>Название</td>
+                                        <td>${device.name!""}</td>
+                                    </tr>
 
-                    </thead>
-                </table>
-            </td>
+                                    <tr>
+                                        <td>Описание</td>
+                                        <td>${device.description!""}</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <table>
+                                    <tr>
+                                        <td style="text-align: center;">Закупка</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="text-align: center;">${device.buyingPrice!0.00}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="text-align: center;">Продажа</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="text-align: center;">${device.getSellingPrice()!0.00}</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                </div>
+            </div>
         </div>
         <!-- /.content -->
     </div>
